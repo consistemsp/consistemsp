@@ -28,15 +28,16 @@
 </head>
 
 <body>
+  <nav id="nav-container">
+    <img src="/images/consistem_invert.svg" alt="Consistem">
+  </nav>
 
   <section class="logo">
     <h1 class="header">
-      <img src="/images/consistem3.svg" alt="Consistem Contabilidade S/S">
+      <img src="/images/consistem.svg" alt="Consistem Contabilidade S/S">
     </h1>
 
-    <div class="address">
-      <h2>desde &nbsp;&nbsp;1996</h2>
-    </div>
+    <div id="limit"></div>
   </section>
 
 
@@ -45,13 +46,13 @@
     <div class="card">
       <b>Nossos principais serviços:</b>
       <ul>
-        <li>Emissão de guias para pagamento de impostos municipais e federais.</li>
-        <li>Declarações mensais como DCTF, Sped PIS/Cofins.</li>
-        <li>Folhas de pagamento de salários e pró-labore com Gfip e eSocial.</li>
-        <li>Contabilidade: balancetes mensais, Balanço e DRE anuais e Sped anual.</li>
-        <li>Empresas: aberturas, alterações e baixa em todas as repartições.</li>
-        <li>Pessoas Físicas: eSocial/Domésticas, IR, Carne Leão e Ganhos de Capital.</li>
-        <li>Condomínios: escrituração do Livro Caixa com resumos demonstrativos.</li>
+        <li><strong>Pessoas Físicas:</strong> eSocial/Domésticas, IR, Carne Leão e Ganhos de Capital.</li>
+        <li><strong>Condomínios:</strong> escrituração do Livro Caixa com resumos demonstrativos.</li>
+        <li><strong>Empresas:</strong> aberturas, alterações e baixa em todas as repartições.</li>
+        <li><strong>Contabilidade:</strong> balancetes mensais, Balanço e DRE anuais e Sped anual.</li>
+        <li><strong>Emissão de guias:</strong> pagamento de impostos municipais e federais.</li>
+        <li><strong>Declarações mensais:</strong> DCTF, Sped PIS/Cofins.</li>
+        <li><strong>Folhas de pagamento:</strong> salários e pró-labore com Gfip e eSocial.</li>
       </ul>
       <b>Consulte-nos para outros serviços.</b>
     </div>
@@ -113,6 +114,18 @@
     </div>
   </div>
 
+  <script>
+    var observer = new IntersectionObserver(function (entries) {
+      // no intersection with screen
+      if (entries[0].intersectionRatio === 0)
+        document.querySelector("#nav-container").classList.add("nav-container-sticky");
+      // fully intersects with screen
+      else if (entries[0].intersectionRatio === 1)
+        document.querySelector("#nav-container").classList.remove("nav-container-sticky");
+    }, { threshold: [0, 1] });
+
+    observer.observe(document.querySelector("#limit"));
+  </script>
 
 </body>
 
