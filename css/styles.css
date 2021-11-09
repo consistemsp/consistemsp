@@ -21,8 +21,9 @@ body {
   font-weight: 400;
   text-align: left;
   background-color: #fbfbfb;
-  background-image: url("https://unsplash.com/photos/m_HRfLhgABo/download?force=true&w=2400");
+  background-image: url("/images/christopher-gower-m_HRfLhgABo-unsplash.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @-webkit-keyframes fadeIn {
@@ -110,6 +111,49 @@ nav img {
   padding: 1em;
 }
 
+.card form {
+  max-width: 20em;
+  margin: 0 auto;
+}
+
+.card label, .card input, .card textarea {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card textarea {
+  height: 4em;
+}
+
+.form {
+  background-color: gold;
+}
+
+.upper {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .8em;
+  padding-top: 1em;
+}
+
+.card input[type=submit], .button-center {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.card input[type=submit]:hover, .button-center:hover {
+  color: whitesmoke;
+  background-color: rgb(26, 39, 78);
+}
+
 .card ul {
   padding-left: 1em;
 }
@@ -122,6 +166,34 @@ nav img {
   font-size: 0.8em;
   padding: 0 0.25em 0;
 }
+
+.return-card {
+  width: 50%;
+  margin: 2em auto;
+  line-height: 1.5;
+  padding: 1em;
+  border-left: 4px solid rgb(26, 39, 78);
+  border-right: 4px solid rgb(26, 39, 78);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+#form-ok, #form-error {
+  display: none;
+}
+
+.button-center {
+  margin: 1em auto 0;
+  display: block;
+}
+
+.google-maps {
+  height: 330px;
+}
+
 
 @media only screen and (min-width: 380px) {
   .logo {

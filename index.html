@@ -7,20 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Consistem Contabilidade S/S</title>
-  <meta name="description" content="Escritório de Contabilidade">
-  <meta name="author" content="SitePoint">
+  <meta name="description" content="Escritório de Contabilidade na Vila Mariana, São Paulo, SP, com atividades iniciadas em 1996 em serviços contábeis para pessoas físicas, condomínios e empresas.">
+  <meta name="author" content="Adriano">
+  <meta name="keywords" content="Contador, Contabilidade, Abertura de Empresas, eSocial, IR, Carne Leão, Ganhos de Capital, DCTF, Sped, PIS/Cofins, Gfip, eSocial">
 
   <meta property="og:title" content="Consistem Contabilidade S/S">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.consistemsp.com.br">
-  <meta property="og:description" content="Escritório de Contabilidade">
-  <!-- <meta property="og:image" content="image.png"> -->
+  <meta property="og:description" content="Escritório de Contabilidade na Vila Mariana, São Paulo, SP, com atividades iniciadas em 1996 em serviços contábeis para pessoas físicas, condomínios e empresas.">
+  <meta property="og:image" content="/images/consistem.svg">
 
   <link rel="icon" href="/favicon.ico">
   <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-  <link rel="stylesheet" href="css/styles.css?v=1.1">
+  <link rel="stylesheet" href="/css/normalize.css?v=1.1">
+  <link rel="stylesheet" href="/css/styles.css?v=1.1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script data-goatcounter="https://consistemsp.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -44,7 +46,7 @@
   <div class="container">
 
     <div class="card">
-      <b>Nossos principais serviços:</b>
+      <strong>Nossos principais serviços:</strong>
       <ul>
         <li><strong>Pessoas Físicas:</strong> eSocial/Domésticas, IR, Carne Leão e Ganhos de Capital.</li>
         <li><strong>Condomínios:</strong> escrituração do Livro Caixa com resumos demonstrativos.</li>
@@ -54,11 +56,11 @@
         <li><strong>Declarações mensais:</strong> DCTF, Sped PIS/Cofins.</li>
         <li><strong>Folhas de pagamento:</strong> salários e pró-labore com Gfip e eSocial.</li>
       </ul>
-      <b>Consulte-nos para outros serviços.</b>
+      <strong>Consulte-nos para outros serviços.</strong>
     </div>
 
     <div class="card addr">
-      <b>Fale conosco:</b>
+      <strong>Fale conosco:</strong>
       <div style="max-width: 320px; margin: 0 auto;">
         <table>
           <tr>
@@ -75,7 +77,7 @@
                 email
               </span>
             </td>
-            <td><a href="mailto:contato@consistemsp.com.br">contato@consistemsp.com.br</a></td>
+            <td><a href="mailto:contato&#64;consistemsp&#46;com&#46;br">contato&#64;consistemsp&#46;com&#46;br</a></td>
           </tr>
 
           <tr>
@@ -106,26 +108,54 @@
       </div>
     </div>
 
-    <div class="card" style="height: 330px;">
+    <div class="card google-maps">
       <div id="wrapper" style="position:relative">
         <iframe style="position:absolute;top:0px;width:100%;height:300px;border:0" loading="lazy" allowfullscreen
           src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJm__WpulbzpQR34XS7j7xpAE&key=AIzaSyDQHj_GCBcH7AZGSth8_WkMGR1PZvaFEI0"></iframe>
       </div>
     </div>
+
+    <div id="limit2"></div>
+
+    <div class="card form">
+      <strong class="upper">Envie-nos uma mensagem</strong>
+      <!-- <form action="https://submit-form.com/OWGLDv3x" method="POST"> -->
+      <form id="contact-form" onsubmit="sendForm(event)">
+        <input type="hidden" name="_redirect" value="https://www.consistemsp.com.br" />
+
+        <label for="name" class="upper">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Nome" required="" />
+
+        <label for="f-email" class="upper">E-mail</label>
+        <input id="f-email" type="email" name="email" placeholder="E-mail" required="" />
+        <input type="email" name="verify_email" placeholder="E-mail" style="display:none" />
+
+        <label for="f-message" class="upper">Mensagem</label>
+        <textarea id="f-message" name="message" placeholder="Mensagem" required=""></textarea>
+
+        <input type="submit" value="Enviar" class="upper">
+      </form>
+      <div id="form-ok" class="return-card">
+        Mensagem enviada com sucesso. Aguarde que em breve retornaremos com um e-mail.
+        <span class="material-icons-outlined" style="font-family: 'Material Icons';color: rgb(39, 125, 253);">
+          done_all
+        </span>
+        <button class="button-center upper" onclick="showForm()">Enviar outra mensagem</button>
+      </div>
+      <div id="form-error" class="return-card">
+        <span class="material-icons-outlined" style="font-size: 180%;font-family: 'Material Icons';color: rgb(253, 39, 39);vertical-align: bottom;">
+          report
+        </span>
+        Ops, falha no envio. Quer tentar novamente?
+        Outra opção é nos contactar diretamente pelo nosso email
+        <a href="mailto:contato&#64;consistemsp&#46;com&#46;br">contato&#64;consistemsp&#46;com&#46;br</a>.
+        <button class="button-center upper" onclick="showForm()">Tentar novamente</button>
+      </div>
+    </div>
+
   </div>
 
-  <script>
-    var observer = new IntersectionObserver(function (entries) {
-      // no intersection with screen
-      if (entries[0].intersectionRatio === 0)
-        document.querySelector("#nav-container").classList.add("nav-container-sticky");
-      // fully intersects with screen
-      else if (entries[0].intersectionRatio === 1)
-        document.querySelector("#nav-container").classList.remove("nav-container-sticky");
-    }, { threshold: [0, 1] });
-
-    observer.observe(document.querySelector("#limit"));
-  </script>
+  <script src="/scripts/main.js"></script>
 
 </body>
 
