@@ -69,7 +69,7 @@ nav img {
 }
 
 .logo {
-  height: 200px;
+  height: 160px;
   text-align: center;
   background-color: rgba(233, 233, 233, .5);
   margin-bottom: 1em;
@@ -82,7 +82,7 @@ nav img {
 }
 
 .logo img {
-  margin: 1em 0 0;
+  margin: 0.6em 0 0;
   padding: 0 1em;
   max-width: 100%;
   height: auto;
@@ -197,7 +197,7 @@ nav img {
 
 @media only screen and (min-width: 380px) {
   .logo {
-    height: 240px;
+    height: 180px;
   }
   .logo h2 {
     font-size: 1.9em;
@@ -210,9 +210,9 @@ nav img {
   }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 470px) {
   .logo {
-    height: 280px;
+    height: 250px;
   }
   .logo h2 {
     font-size: 1.9em;
@@ -228,12 +228,14 @@ nav img {
 
 @media only screen and (min-width: 740px) {
   .logo {
+    height: 230px;
     background-color: transparent;
   }
 }
 
 @media only screen and (min-width: 840px) {
   .logo {
+    height: 240px;
     background-color: transparent;
   }
   .logo h2 {
