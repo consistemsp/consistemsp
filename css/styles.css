@@ -111,6 +111,11 @@ nav img {
   padding: 1em;
 }
 
+.card p {
+	margin: 0.5em auto 1.5em;
+	text-align: justify;
+}
+
 .card form {
   max-width: 20em;
   margin: 0 auto;
